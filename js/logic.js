@@ -103,7 +103,7 @@ function start(){
 
   userChar="";
   enemyDefined="";
-  $("#msg").empty();
+  document.getElementById("msg").innerHTML="PICK YOUR HERO";
   $("#message").empty();
   $("#enemy").empty();
   $("#available").empty();
