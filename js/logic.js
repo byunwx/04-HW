@@ -115,6 +115,8 @@ function start(){
   document.getElementById("message").innerHTML="";
   choice(".characterBox");
 };
+
+
 function createCharacter(id, char, color){
   var newID= char.id
   var newDiv = document.createElement("div");
@@ -174,7 +176,7 @@ function enemyChoice(){
     }
 
   };
-
+  document.getElementById("msg").innerHTML="PICK AN ENEMY TO ATTACK";
   enemy();
   };
 };
@@ -206,6 +208,7 @@ function moveToAttack(){
       console.log("Dead Enemy: "+character[i].id);
     }
   };
+  document.getElementById("msg").innerHTML="ATTACK THE ENEMY BY PRESSING ATTACK BUTTON!";
   attackBtn();
 };
 
