@@ -14,7 +14,7 @@ body {
   margin: 0;
   padding-bottom: 15rem;
   min-height: 100%;
-  background-image: url(http://www.pbs.org/wgbh/nova/next/wp-content/uploads/2017/06/quantum-entanglement_2048x1152.jpg);
+  background-image: url("../images/bg-space.jpg");
   font-family: 'Russo One', sans-serif;
 }
 
@@ -27,7 +27,7 @@ body {
  */
 
 footer{
- background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ab/Space_banner.jpg);
+ background-image: url("../images/Space_banner.jpg");
  right: 0;
  bottom: 0;
  left:0;
@@ -94,32 +94,32 @@ h3{
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(https://cdn.images.express.co.uk/img/dynamic/36/590x/youngobi-720424.jpg);
+  background-image: url("../images/kenobi.jpg");
 
 }
 #skywalker{
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(http://static.tvtropes.org/pmwiki/pub/images/skywalker_luke.jpg);
+  background-image: url("../images/skywalker.jpg");
 }
 #sidious{
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(https://static.comicvine.com/uploads/scale_super/11122/111220339/5341840-5147833984-latest);
+  background-image: url("../images/darth.png");
 }
 #maul{
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(https://i.pinimg.com/564x/b1/f9/81/b1f981fa6335b19b2c276c7c0067b85b--star-wars-characters-star-wars-episodes.jpg);
+  background-image: url("../images/maul.jpg");
 }
 #yoda{
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url(http://www.allgenfinancial.com/wp-content/uploads/2015/05/Air_yoda.jpg);
+  background-image: url("../images/yoda.jpg");
 }
 #message, #msg{
   color: white;
