@@ -50,6 +50,9 @@ var characterDefult=[
 var character=characterDefult.slice(0);
 var userChar="";
 var enemyDefined="";
+var audioSaber= new Audio("./sound/lightsaber.wav");
+var audioThunder= new Audio("./sound/thunder.wav");
+
 
 function start(){
   console.log(characterDefult);
@@ -145,6 +148,11 @@ function choice(ind){
   $("#choice").empty();
   userChar= newID;
   console.log("heroChosen: "+character[userChar].id);
+  if(userChar==2){
+  audioThunder.play();
+  } else {
+  audioSaber.play();
+  }
   enemyChoice();
   });
 }
@@ -214,6 +222,11 @@ function moveToAttack(){
 
 
 function attackReady(){
+  if(userChar==2 || enemyDefined==2){
+  audioThunder.play();
+  } else {
+  audioSaber.play();
+  }
   var enemyCounterPoint=character[enemyDefined].cp;
   var newAttackPoint=character[userChar].ap+10;
   character[userChar].hp-=character[enemyDefined].cp;
@@ -253,6 +266,11 @@ function attackBtn(){
   $("#attackBtn").click(function(){
     attackReady();
   });
+  if(userChar==2 || enemyDefined==2){
+  audioThunder.play();
+  } else {
+  audioSaber.play();
+  }
 };
 
 start();
