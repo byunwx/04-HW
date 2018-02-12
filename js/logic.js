@@ -1,4 +1,20 @@
 $(document).ready(function(){
+var music = document.getElementById('music');
+$("#pButton").on("click", function(){
+  playAudio();
+})
+function playAudio() {
+  	if (music.paused) {
+  		music.play();
+  		pButton.className = "glyphicon glyphicon-pause";
+  		pButton.className = "pause";
+  	} else {
+  		music.pause();
+  		pButton.className = "glyphicon glyphicon-play";
+  		pButton.className = "play";
+  	}
+  }
+
 var characterDefult=[
   kenobi={
     id: "kenobi",
@@ -55,7 +71,7 @@ var audioThunder= new Audio("./sound/thunder.wav");
 
 
 function start(){
-  console.log(characterDefult);
+  pButton.className = "play";
   character=[
     kenobi={
       id: "kenobi",

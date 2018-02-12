@@ -133,4 +133,16 @@ h3{
 }
 h1{
   color:gold;
+  float: left;
 }
+#pButton{
+	height:60px;
+	width: 60px;
+	border: none;
+	background-size: 50% 50%;
+	background-position: center;
+  margin: auto;
+  float: right;
+}
+.play{background: url('http://theheartgarden.com.au/wp-content/uploads/2016/11/video-play-icon.png') no-repeat;}
+.pause{background: url('../images/icons/pause.png') no-repeat;}
