@@ -1,0 +1,136 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 15rem;
+  min-height: 100%;
+  background-image: url(http://www.pbs.org/wgbh/nova/next/wp-content/uploads/2017/06/quantum-entanglement_2048x1152.jpg);
+  font-family: 'Russo One', sans-serif;
+}
+
+.page-wrap {
+  margin: 0 auto;
+}
+
+/**
+ * Footer Styles
+ */
+
+footer{
+ background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/ab/Space_banner.jpg);
+ right: 0;
+ bottom: 0;
+ left:0;
+ padding: 1rem;
+ background: solid;
+ position: absolute;
+ width: 100%;
+ text-align: center;
+ z-index: 1;
+ color: white!important;
+}
+.iconlink{
+  width:170px;
+  margin: 20px auto;
+}
+.smallbox{
+  width: 50px;
+  height: 50px;
+  margin: 0 2px;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.box1{
+  background-image: url("../images/icons/github.png");
+}
+.box2{
+  background-image: url("../images/icons/linkicon.png");
+}
+.box3{
+  background-image: url("../images/icons/stackicon.png");
+}
+.box1:hover{
+  background-image: url("../images/icons/githubicon.png");
+}
+.box2:hover{
+  background-image: url("../images/icons/link-icon.jpg");
+}
+.box3:hover{
+  background-image: url("../images/icons/stack.png");
+}
+
+
+.characterBox{
+  width: 150px;
+  height: 150px;
+  border: solid red;
+  float: left;
+  text-align: center;
+}
+.row{
+  margin: auto;
+}
+.healthPoint{
+  text-align: center;
+  position: relative;
+  top: 60%!important;
+}
+h3{
+  color: gold;
+}
+#kenobi{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(https://cdn.images.express.co.uk/img/dynamic/36/590x/youngobi-720424.jpg);
+
+}
+#skywalker{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(http://static.tvtropes.org/pmwiki/pub/images/skywalker_luke.jpg);
+}
+#sidious{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(https://static.comicvine.com/uploads/scale_super/11122/111220339/5341840-5147833984-latest);
+}
+#maul{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(https://i.pinimg.com/564x/b1/f9/81/b1f981fa6335b19b2c276c7c0067b85b--star-wars-characters-star-wars-episodes.jpg);
+}
+#yoda{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(http://www.allgenfinancial.com/wp-content/uploads/2015/05/Air_yoda.jpg);
+}
+#message, #msg{
+  color: white;
+}
+.bg-danger{
+  background-color: red;
+  width: 50%;
+  height: 100px;
+  color:white;
+  font-size: 50px;
+}
+h1{
+  color:gold;
+}
