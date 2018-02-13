@@ -129,6 +129,7 @@ function start(){
   $("#available").empty();
   $("#chosen").empty();
   $("#buttonArea").empty();
+  $("#HPbtn").empty();
   for (var i = 0; i < character.length; i++) {
     createCharacter("#choice", character[i], "red");
   }
@@ -224,6 +225,7 @@ function enemy(){
 
 function moveToAttack(){
   $("#buttonArea").html("<button id='attackBtn' class='btn bg-danger btn-lg'>ATTACK!</button>");
+  $("#HPbtn").html("<button id='hpBtn' class='btn bg-secondary btn-sm'>POTION</button>");
   for (var i = 0; i < character.length; i++) {
     if(character[i].index==enemyDefined){
       createCharacter("#enemy", character[i], "red");
@@ -234,6 +236,11 @@ function moveToAttack(){
     }
   };
   document.getElementById("msg").innerHTML="ATTACK THE ENEMY BY PRESSING ATTACK BUTTON!";
+  if(userChar==2 || enemyDefined==2){
+  audioThunder.play();
+  } else {
+  audioSaber.play();
+  }
   attackBtn();
 };
 
@@ -247,7 +254,7 @@ function attackReady(){
   var enemyCounterPoint=character[enemyDefined].cp;
   var newAttackPoint=character[userChar].ap+10;
   character[userChar].hp-=character[enemyDefined].cp;
-  character[userChar].ap=newAttackPoint
+  character[userChar].ap=newAttackPoint;
   character[enemyDefined].hp-=character[userChar].ap;
   document.getElementById("message").innerHTML=character[userChar].name+" does "+newAttackPoint+" damage.<br> "+character[enemyDefined].name+" does "+enemyCounterPoint+" counter damage.";
   $("#enemy").empty();
@@ -260,6 +267,7 @@ function attackReady(){
     $("#available").empty();
     $("#chosen").empty();
     $("#buttonArea").empty();
+    $("#HPbtn").empty();
 
     start();
 
@@ -269,6 +277,7 @@ function attackReady(){
     $("#enemy").empty();
     $("#available").empty();
     $("#buttonArea").empty();
+    $("#HPbtn").empty();
     $("#chosen").empty();
     enemyChoice();
   }else{
@@ -283,11 +292,18 @@ function attackBtn(){
   $("#attackBtn").click(function(){
     attackReady();
   });
-  if(userChar==2 || enemyDefined==2){
-  audioThunder.play();
-  } else {
-  audioSaber.play();
-  }
+  $("#hpBtn").click(function(){
+    var newAttackPoint=character[userChar].ap/2;
+    character[userChar].hp+=10;
+    character[userChar].ap=newAttackPoint;
+    console.log(character[userChar].ap);
+    $("#enemy").empty();
+    $("#chosen").empty();
+    createCharacter("#enemy", character[enemyDefined], "red");
+    createCharacter("#chosen", character[userChar], "green");
+    document.getElementById("message").innerHTML="Your HP increased by 10";
+    document.getElementById("msg").innerHTML="Side effect: Your attack point drop in half!";
+  });
 };
 
 start();
