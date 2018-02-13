@@ -293,7 +293,7 @@ function attackBtn(){
     attackReady();
   });
   $("#hpBtn").click(function(){
-    var newAttackPoint=character[userChar].ap/2;
+    var newAttackPoint=Math.floor(character[userChar].ap/2);
     character[userChar].hp+=10;
     character[userChar].ap=newAttackPoint;
     console.log(character[userChar].ap);
