@@ -254,7 +254,7 @@ function attackReady(){
   $("#chosen").empty();
   createCharacter("#enemy", character[enemyDefined], "red");
   createCharacter("#chosen", character[userChar], "green");
-  if(character[userChar].hp<0){
+  if(character[userChar].hp<=0){
     document.getElementById("msg").innerHTML=character[userChar].name+" is dead please try again!";
     $("#enemy").empty();
     $("#available").empty();
@@ -263,7 +263,7 @@ function attackReady(){
 
     start();
 
-  }else if(character[enemyDefined].hp<0){
+  }else if(character[enemyDefined].hp<=0){
     document.getElementById("msg").innerHTML=character[enemyDefined].name+" is dead!! You won! select next enemy!";
     character[enemyDefined].status="dead";
     $("#enemy").empty();
