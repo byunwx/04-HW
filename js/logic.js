@@ -14,7 +14,7 @@ function playAudio() {
   		pButton.className = "play";
   	}
   }
-var imageArr= ["https://media.giphy.com/media/ecpSPprSgRQ9G/giphy.gif", "https://media.giphy.com/media/1UJ33wJMACjTi/giphy.gif", "https://media.giphy.com/media/CMCiuaxfIRANq/giphy.gif", "https://media.giphy.com/media/z2dN5uSLQYsY8/giphy.gif", "https://media.giphy.com/media/nmwjV41Gh6QhO/giphy.gif", "https://media.giphy.com/media/iBR1XJFNynUpa/giphy.gif"]
+var imageArr= ["https://media.giphy.com/media/ecpSPprSgRQ9G/giphy.gif", "https://media.giphy.com/media/1UJ33wJMACjTi/giphy.gif", "https://media.giphy.com/media/CMCiuaxfIRANq/giphy.gif", "https://media.giphy.com/media/z2dN5uSLQYsY8/giphy.gif", "https://media.giphy.com/media/nmwjV41Gh6QhO/giphy.gif"]
 var imageChanger=0;
 var characterDefult=[
   kenobi={
@@ -73,7 +73,7 @@ var audioThunder= new Audio("./sound/thunder.wav");
 
 function start(){
   pButton.className = "play";
-  var imageStart ="url("+imageArr[5]+")";
+  var imageStart ='url("./images/giphy-downsized.gif")';
   document.getElementById("giphy").style.backgroundImage = imageStart;
   character=[
     kenobi={
@@ -271,7 +271,7 @@ function attackReady(){
     $("#buttonArea").empty();
     $("#HPbtn").empty();
 
-    start();
+    setTimeout(start, 2000);
 
   }else if(character[enemyDefined].hp<=0){
     document.getElementById("msg").innerHTML=character[enemyDefined].name+" is dead!! You won! select next enemy!";
