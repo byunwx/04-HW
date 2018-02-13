@@ -122,6 +122,7 @@ function start(){
 
   userChar="";
   enemyDefined="";
+  playAudio();
   document.getElementById("msg").innerHTML="PICK YOUR HERO";
   $("#message").empty();
   $("#enemy").empty();
