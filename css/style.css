@@ -157,3 +157,18 @@ h1{
 
 .play{background: url('http://theheartgarden.com.au/wp-content/uploads/2016/11/video-play-icon.png') no-repeat;}
 .pause{background: url('../images/icons/pause.png') no-repeat;}
+
+#giphy{
+  position: absolute;
+  right: 10%;
+  bottom: 25%;
+  width: 500px;
+  height: 300px;
+  background-image: url(https://media.giphy.com/media/ecpSPprSgRQ9G/giphy.gif);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  border: solid 5px;
+  border-color: gold;
+}

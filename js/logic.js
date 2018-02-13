@@ -14,7 +14,8 @@ function playAudio() {
   		pButton.className = "play";
   	}
   }
-
+var imageArr= ["https://media.giphy.com/media/ecpSPprSgRQ9G/giphy.gif", "https://media.giphy.com/media/1UJ33wJMACjTi/giphy.gif", "https://media.giphy.com/media/CMCiuaxfIRANq/giphy.gif", "https://media.giphy.com/media/z2dN5uSLQYsY8/giphy.gif", "https://media.giphy.com/media/nmwjV41Gh6QhO/giphy.gif", "https://media.giphy.com/media/iBR1XJFNynUpa/giphy.gif"]
+var imageChanger=0;
 var characterDefult=[
   kenobi={
     id: "kenobi",
@@ -72,6 +73,8 @@ var audioThunder= new Audio("./sound/thunder.wav");
 
 function start(){
   pButton.className = "play";
+  var imageStart ="url("+imageArr[5]+")";
+  document.getElementById("giphy").style.backgroundImage = imageStart;
   character=[
     kenobi={
       id: "kenobi",
@@ -290,6 +293,7 @@ function attackReady(){
 function attackBtn(){
   $("#attackBtn").click(function(){
     attackReady();
+    funImage();
   });
   $("#hpBtn").click(function(){
     var newAttackPoint=Math.floor(character[userChar].ap/2);
@@ -304,7 +308,17 @@ function attackBtn(){
     document.getElementById("msg").innerHTML="Side effect: Your attack point drop in half!";
   });
 };
-
+function funImage(){
+  var imageUser ="url("+imageArr[userChar]+")";
+  var imageEnemy ="url("+imageArr[enemyDefined]+")";
+  if(imageChanger==0){
+  document.getElementById("giphy").style.backgroundImage = imageUser;
+  imageChanger=1;
+  }else{
+  document.getElementById("giphy").style.backgroundImage = imageEnemy;
+  imageChanger=0;
+  }
+}
 start();
 
 });
