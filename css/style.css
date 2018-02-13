@@ -144,5 +144,16 @@ h1{
   margin: auto;
   float: right;
 }
+#hpBtn{
+  background: inherit;
+  background-image: url(https://rpgmaker.net/media/content/games/4468/screenshots/hp_potion.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 40px;
+  margin-top: 10px;
+}
+
 .play{background: url('http://theheartgarden.com.au/wp-content/uploads/2016/11/video-play-icon.png') no-repeat;}
 .pause{background: url('../images/icons/pause.png') no-repeat;}

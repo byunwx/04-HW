@@ -224,7 +224,7 @@ function enemy(){
 
 function moveToAttack(){
   $("#buttonArea").html("<button id='attackBtn' class='btn bg-danger btn-lg'>ATTACK!</button>");
-  $("#HPbtn").html("<button id='hpBtn' class='btn bg-secondary btn-sm'>POTION</button>");
+  $("#HPbtn").html("<button id='hpBtn' class='btn bg-secondary btn-sm'></button>");
   for (var i = 0; i < character.length; i++) {
     if(character[i].index==enemyDefined){
       createCharacter("#enemy", character[i], "red");
