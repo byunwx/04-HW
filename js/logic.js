@@ -63,7 +63,7 @@ var characterDefult=[
     status:"alive"
   }
 ];
-playAudio();
+setTimeout(playAudio, 1000);
 var character=characterDefult.slice(0);
 var userChar="";
 var enemyDefined="";
