@@ -155,7 +155,7 @@ h1{
   margin-top: 10px;
 }
 
-.play{background: url('http://theheartgarden.com.au/wp-content/uploads/2016/11/video-play-icon.png') no-repeat;}
+.play{background: url('../images/icons/video-play-icon.png') no-repeat;}
 .pause{background: url('../images/icons/pause.png') no-repeat;}
 
 #giphy{
